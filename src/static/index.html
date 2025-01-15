@@ -175,10 +175,15 @@ before change
     <script src="js/main.js" type="module"></script>
     <script>
         // 默认的API密钥
-        const DEFAULT_API_KEY = "AIzaSyCzttVfqGVwfAq7qbApeEGwvw5Td0h-Us4";
+        const DEFAULT_API_KEY = "your-default-api-key-here";
 
-        document.getElementById('connect-button').addEventListener('click', function() {
-            const apiKeyInput = document.getElementById('api-key');
+        // 获取页面元素
+        const apiKeyInput = document.getElementById('api-key');
+        const connectButton = document.getElementById('connect-button');
+        const logsContainer = document.getElementById('logs-container');
+
+        // 连接按钮点击事件
+        connectButton.addEventListener('click', function() {
             const apiKey = apiKeyInput.value.trim() || DEFAULT_API_KEY; // 如果用户没有输入，则使用默认的API密钥
 
             if (!apiKey) {
@@ -186,9 +191,12 @@ before change
                 return;
             }
 
-            // 这里可以添加连接到API的逻辑
+            // 模拟连接到API的逻辑
+            logsContainer.innerHTML += `<p>Connecting with API Key: ${apiKey}</p>`;
             console.log("Connecting with API Key:", apiKey);
-            // 例如：connectToAPI(apiKey);
+
+            // 这里可以添加实际的API连接逻辑
+            <script src="js/main.js" type="module"></script>
         });
     </script>
 </body>
